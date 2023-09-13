@@ -5,7 +5,7 @@ module.exports = {
   productionSourceMap: false,
   transpileDependencies: ['element-ui', 'ele-admin', 'vue-i18n'],
   outputDir: 'docs',
-  publicPath: '/ele/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/ele/' : '/',
   configureWebpack: {
     performance: {
       maxAssetSize: 2000000,

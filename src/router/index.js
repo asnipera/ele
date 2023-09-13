@@ -12,6 +12,7 @@ import { routes, getMenuRoutes } from './routes';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+  base: '/ele/',
   routes,
   mode: 'history',
   scrollBehavior() {
